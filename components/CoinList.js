@@ -19,7 +19,7 @@ export default function CoinList({coins}) {
           <>    
           <div className="container border-bottom">
           <div className="table-responsive">
-          <table className="table table-striped table-dark text-white table-hover">
+          <table className="table table-striped align-middle table-dark text-white table-hover">
             <thead>
                 <tr>
                     <th colSpan="2">Name</th>

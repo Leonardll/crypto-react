@@ -1,8 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
-import { useState, useEffect } from 'react';
-import axios from 'axios'
+import { useState } from 'react';
 import Header from '../components/Header';
 import CoinList from '../components/CoinList';
 
@@ -49,8 +48,7 @@ export default function Home({coins}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header onChange={handleChange} setSearch={setSearch} filteredCoins={filteredCoins} />
-      <main className="h-100">
-      <p>Hello</p>     
+      <main className="h-100">   
        <CoinList coins={filteredCoins}/>  
       </main>       
       <footer className={styles.footer}>
