@@ -1,10 +1,15 @@
 const webpack = require('webpack');
 const path = require('path');
+//const withPlugins = require('next-compose-plugins');
+//const optimizedImages = require('next-optimized-images');
+
 
 
 module.exports = {
   images: {
     domains: ['assets.coingecko.com'],
+    //loader: 'imgix',
+    //path: 'https://assets.coingecko.com/',
   },
   reactStrictMode: true,
   entry: './src/index.js',
@@ -27,6 +32,7 @@ module.exports = {
       },
     ],
   },
+
   //...
-};
+}
 

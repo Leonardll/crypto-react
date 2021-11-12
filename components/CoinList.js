@@ -1,7 +1,7 @@
 import Coin from './Coin';
 
 export default function CoinList({coins}) {
-    const { id,
+    const { 
             name, 
             price, 
             symbol, 

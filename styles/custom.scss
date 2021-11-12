@@ -1,0 +1,100 @@
+@import '/node_modules/bootstrap/scss/bootstrap.scss';
+
+$theme-colors: (
+  'primary': #145bea,
+  'secondary': #833bec,
+  'success': #1ce1ac,
+  'info': #ff7d50,
+  'warning': #ffbe0b,
+  'danger': #ff007f,
+  'light': #c0ccda,
+  'dark': #001738,
+);
+
+
+
+
+// .masterhead {
+//     padding-top: 17rem;
+//     padding-bottom: 12.5rem;
+//     color: #fff;
+//     background-image: url('../public/header-bg.jpg');
+//     background-repeat: no-repeat;
+//     background-attachment: scroll;
+//     background-position: center center;
+//     background-size: cover;
+//     text-align: center;
+
+//     .masterhead-subheading {
+//       font-size: 2.25rem;
+//       font-style: italic;
+//       line-height: 2.25rem;
+//       margin-bottom: 2rem;
+//     }
+    
+
+//     .masterhead-heading {
+//     font-size: 4.5rem;
+//     font-weight: 700;
+//     line-height: 4.5rem;
+//     margin-bottom: 4rem;
+//     }
+// }
+// .form-switch {
+//   .form-check-input {
+//     width: 3em;
+//     height: 2em;
+//   }
+// }
+
+// .social .school,
+// .social .calendar {
+//     flex-basis: 1;
+//     flex-grow: 1;
+//     max-width: 100%;
+//     position: relative;
+//     padding-left: 45px;
+// }
+
+// .social .school::before,
+// .social .calendar::before {
+//     font-family: fontawesome;
+//     color: #51b5b1;
+//     font-size: 25px;
+//     border-radius: 100px;
+//     border: 1px solid #51b5b1;
+//     width: 40px;
+//     height: 40px;
+//     display: block;
+//     line-height: 40px;
+//     text-align: center;
+//     position: absolute;
+//     left: 0;
+//     top: 0;
+// }
+
+// .social .school::before {
+//     content: "\f19d";
+// }
+
+// .social .calendar::before {
+//     content: "\f073";
+// }
+
+// .social h5 {
+//     font-size: 14px;
+//     font-weight: 600;
+//     padding: 0;
+//     margin: 0;
+// }
+
+// .social h6 {
+//     font-size: 13px;
+//     font-weight: 400;
+//     padding: 6px 0 0;
+//     margin: 0;
+//     color: #7a7a7a;
+// }
+
+
+

@@ -1,13 +1,37 @@
-
+import Link from 'next/link'
+import { ImCross } from 'react-icons/im'
+import { useState } from 'react'
 function Header ({setSearch, ...rest}) {
+    const [clicked, setClicked] = useState(false);
+      
     return (
-    <header className="d-flex justify-content-center py-3">
-      <ul className="nav nav-pills">
-        <li className="nav-item"><a href="#" className="nav-link active" aria-current="page">Home</a></li>
-        <li className="nav-item"><a href="#" className="nav-link">Features</a></li>
-        <li className="nav-item"><a href="#" className="nav-link">Pricing</a></li>
-        <li className="nav-item"><a href="#" className="nav-link">FAQs</a></li>
-        <li className="nav-item"><a href="#" className="nav-link">About</a></li>
+    <>
+    <nav className="navbar navbar-expand-md navbar-light bg-light"> 
+    <div className="container-fluid">
+    <button className="navbar-toggler collapsed" 
+            type="button" data-bs-toggle="collapse"  
+            aria-expanded="false" 
+            aria-label="Toggle navigation"
+            onClick={ () => setClicked(!clicked)}>
+              {
+            clicked ? 
+            <ImCross 
+            onClick={ () => setClicked(true)}  
+            /> :
+            <span 
+             onClick={ () => setClicked(!clicked)} 
+             className="navbar-toggler-icon">
+            </span>
+            }
+    
+    </button> 
+    <div className={ !clicked ? "navbar-collapse collapse  justify-content-center py-3" : "navbar-collapse collapse show justify-content-center py-3"}>
+      <ul className="navbar nav nav-pills">
+        <Link href="/" className="nav-item"><a className="nav-link active" aria-current="page">Home</a></Link>
+        <Link href="/" className="nav-item"><a className="nav-link">CoinList</a></Link>
+        <Link href="/pricing"className="nav-item"><a href="/Pricing" className="nav-ink">Pricing</a></Link>
+        <Link href="/faqs" className="nav-item"><a href="/FAQs" className="nav-link">FAQs</a></Link>
+        <Link  href="/about" className="nav-item"><a href="/About" className="nav-link">About</a></Link>
       </ul>
       <div>
       <input
@@ -20,7 +44,11 @@ function Header ({setSearch, ...rest}) {
       aria-label="Search"      
       />
       </div>
-    </header>
+    </div>
+    </div>
+    </nav>
+    
+    </>
     )
 }
 
