@@ -7,14 +7,13 @@ function Header ({setSearch, ...rest}) {
       
     return (
     <>
-    <nav className="navbar navbar-expand-md navbar-light bg-light"> 
-    
+    <nav className="navbar navbar-expand-md navbar-light bg-light">
+    <div className="container-fluid">     
     <a className="navbar-brand text-primary" href="#">
       < IoLogoBitcoin size={30}  />
       Crypto Tracker
-    </a>
-  
-    <div className="container-fluid">
+    </a>  
+    {/* <div className=""> */}
     <button className="navbar-toggler collapsed" 
             type="button" data-bs-toggle="collapse"  
             aria-expanded="false" 
