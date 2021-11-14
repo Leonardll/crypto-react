@@ -8,8 +8,8 @@ const path = require('path');
 module.exports = {
   images: {
     domains: ['assets.coingecko.com'],
-    //loader: 'imgix',
-    //path: 'https://assets.coingecko.com/',
+    loader: 'imgix',
+    path: 'https://assets.coingecko.com/',
   },
   reactStrictMode: true,
   entry: './src/index.js',

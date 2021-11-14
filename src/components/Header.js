@@ -25,13 +25,55 @@ function Header ({setSearch, ...rest}) {
             }
     
     </button> 
-    <div className={ !clicked ? "navbar-collapse collapse  justify-content-center py-3" : "navbar-collapse collapse show justify-content-center py-3"}>
+    <div className={ !clicked ? "navbar-collapse collapse  justify-content-center py-3" 
+    : "navbar-collapse collapse show justify-content-center py-3"
+    }>
       <ul className="navbar nav nav-pills">
-        <Link href="/" className="nav-item"><a className="nav-link active" aria-current="page">Home</a></Link>
-        <Link href="/" className="nav-item"><a className="nav-link">CoinList</a></Link>
-        <Link href="/pricing"className="nav-item"><a href="/Pricing" className="nav-ink">Pricing</a></Link>
-        <Link href="/faqs" className="nav-item"><a href="/FAQs" className="nav-link">FAQs</a></Link>
-        <Link  href="/about" className="nav-item"><a href="/About" className="nav-link">About</a></Link>
+        <Link
+        activeClass="active"
+        to="main"
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={500} 
+        href="#main" 
+        className="nav-item">
+        <a 
+        className="nav-link active"
+         aria-current="page"
+         >
+         Home
+         </a>
+         </Link>
+        <Link
+        activeClass="active"
+        to="About"
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={500}  
+        href="#about"
+        className="nav-item"
+        >
+        <a 
+        className="nav-link"
+        >
+        About
+        </a>
+        </Link>
+        <Link 
+        activeClass="active"
+        to="contact"
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={500}  
+        href="#contact"
+        className="nav-item">
+        <a  className="nav-link">
+        Contact
+        </a>
+        </Link>                
       </ul>
       <div>
       <input

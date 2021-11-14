@@ -11,8 +11,8 @@ function Coin({ image, name, symbol, price, volume, priceChange, marketcap }) {
               className="mr-3"
               src={image}
               alt="crypto"
-              height="30px"
-              width="30px"
+              height={30}
+              width={30}
             />
             <span className="m-2">
               <h3>{name}</h3>

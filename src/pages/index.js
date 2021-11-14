@@ -4,6 +4,8 @@ import styles from '../../styles/Home.module.scss'
 import { useState } from 'react';
 import Header from '../components/Header';
 import CoinList from '../components/CoinList';
+import Contact from '../components/Contact';
+import About from '../components/About';
 
 export default function Home({coins}) {
   
@@ -48,9 +50,13 @@ export default function Home({coins}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header onChange={handleChange} setSearch={setSearch} filteredCoins={filteredCoins} />
-      <main className="h-100">   
-       <CoinList coins={filteredCoins}/>  
-      </main>       
+      <div data-spy="scroll" data-target="#navbar-example2" data-offset="0">  
+      <main className="h-100"> 
+       <CoinList coins={filteredCoins}/>
+       <About />
+       <Contact />
+      </main>
+      </div>       
       <footer className="footer d-flex justify-content-center">
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
