@@ -1,12 +1,19 @@
 import Link from 'next/link'
 import { ImCross } from 'react-icons/im'
 import { useState } from 'react'
+import {IoLogoBitcoin} from 'react-icons/io'
 function Header ({setSearch, ...rest}) {
     const [clicked, setClicked] = useState(false);
       
     return (
     <>
     <nav className="navbar navbar-expand-md navbar-light bg-light"> 
+    
+    <a className="navbar-brand text-primary" href="#">
+      < IoLogoBitcoin size={30}  />
+      Crypto Tracker
+    </a>
+  
     <div className="container-fluid">
     <button className="navbar-toggler collapsed" 
             type="button" data-bs-toggle="collapse"  
