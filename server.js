@@ -7,7 +7,7 @@ const server = next({
     dev: isDev,
     //location of .next generated after running -> yarn build
     conf: { distDir: '.next' },
-    image :{ domain :['assets.coingecko.com'],}
+    images :{ domains :['assets.coingecko.com'],}
 });
 
 const nextjsHandle = server.getRequestHandler();
