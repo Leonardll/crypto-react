@@ -5,19 +5,19 @@ import { AiOutlineTwitter } from 'react-icons/ai';
 
 function Contact  () {
     return (
-      <section className=" bg-light m-5 footer text-center" id="contact">
+      <section className=" m-3 contact bg-light footer text-center" id="contact">
             <div className="container">
                 <div className="row">
-                    <div className="col-lg-4 mb-5 mb-lg-0">
-                        <h4 className="text-uppercase mb-4">Location</h4>
+                    <div className="col-lg-4 mb-3 mb-lg-0">
+                        <h4 className="text-uppercase">Location</h4>
                         <p className="lead mb-0">
-                            2215 John Daniel Drive
-                            
-                            Clark, MO 65243
+                            London  
+                                                     
+                            Barcelona    
                         </p>
                     </div>
-                    <div className="col-lg-4 mb-5 mb-lg-0">
-                        <h4 className="text-uppercase mb-4">Around the Web</h4>
+                    <div className="col-lg-4 mb-3 mb-lg-0">
+                        <h4 className="text-uppercase">Around the Web</h4>
                         <a 
                         className="btn btn-outline-primary text-primary btn-social mx-1" href="#!">
                         < FaFacebook size={30} className="fab fa-fw fa-facebook-f" /></a>
@@ -33,7 +33,7 @@ function Contact  () {
                         < FaGithub  size={30} className="fab fa-fw fa-dribbble" /></a>
                     </div>
                     <div className="col-lg-4">
-                        <h4 className="text-uppercase mb-4">About Freelancer</h4>
+                        <h4 className="text-uppercase">About Freelancer</h4>
                         <p className="lead mb-0">
                             Freelance is a free to use, MIT licensed Bootstrap theme created by
                             <a href="http://startbootstrap.com">Start Bootstrap</a>                            
