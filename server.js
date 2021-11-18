@@ -1,5 +1,6 @@
 const { https } = require('firebase-functions');
 const { default: next } = require('next');
+//const config = require("./next.config");
 
 const isDev = process.env.NODE_ENV !== 'production';
 
