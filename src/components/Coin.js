@@ -27,11 +27,11 @@ function Coin({ image, name, symbol, price, volume, priceChange, marketcap }) {
         <td colSpan="2">${volume.toLocaleString()}</td>
         {priceChange < 0 ? (
           <td colSpan="2" className="text-danger">
-            ${priceChange.toFixed(2)}%
+            {priceChange.toFixed(2)}%
           </td>
         ) : (
           <td colSpan="2" className="text-success">
-            ${priceChange.toFixed(2)}%
+            {priceChange.toFixed(2)}%
           </td>
         )}
         <td colSpan="2">MKT cap: ${marketcap.toLocaleString()}</td>
@@ -42,24 +42,12 @@ function Coin({ image, name, symbol, price, volume, priceChange, marketcap }) {
 
 export default Coin;
 
-{
-  /* <div className="container d-flex flex-row align-items-center border-bottom">
-
-        
-<div className="row d-flex align-items-center mr-3 w-auto">
-<Image className="mr-3" src={image} alt='crypto' height="30px" width="30px"/>                
-</div>
-<div className="d-flex text-align-right w-100 m-3 justify-content-between">
-<h3>{name}</h3>
-<p className="title text-uppercase w-auto">{symbol}</p>
-<p className="w-auto">${price}</p>
-<p className="w-auto">${volume.toLocaleString()}</p>
-{priceChange < 0 ? (
-    <p className="text-danger w-auto">${priceChange.toFixed(2)}%</p>
-) : <p className="text-success w-auto">${priceChange.toFixed(2)}%</p>}
-
-<p>MKT cap: ${marketcap.toLocaleString()}</p>      
-</div>
-</div>
-</> */
+export async function  getServerSideProps(context) {
+  const {id} = context.query
+  const res = await fetch(`https://api.coingecko.com/api/v3/coins/${id}
+  `)
+  const data = await res.json()
+  return {
+    props:{coin : data }
+  }
 }

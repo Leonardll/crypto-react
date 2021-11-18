@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Link from "next/link";
 import { ImCross } from "react-icons/im";
 import { useState } from "react";
@@ -86,7 +87,7 @@ function Header({ setSearch, ...rest }) {
         <div className="container-fluid">
           <div className="masthead-subheading">Welcome To Our Studio!</div>
           <div className="masthead-heading text-uppercase">
-            It Nice To Meet You
+            It's Nice To Meet You
           </div>
           <a className="btn btn-primary btn-xl text-uppercase" href="#about">
             Tell Me More
