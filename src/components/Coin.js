@@ -1,5 +1,8 @@
 import Image from "next/image";
 
+const myLoader = ({ src, width, quality }) => {
+  return `${src}?w=${width}&q=${quality || 75}`
+}
 function Coin({ image, name, symbol, price, volume, priceChange, marketcap }) {
   console.log(name);
   return (
@@ -8,6 +11,7 @@ function Coin({ image, name, symbol, price, volume, priceChange, marketcap }) {
         <td colSpan="2">
           <div className="d-flex align-items-center">
             <Image
+              loader={myLoader}
               className="mr-3"
               src={image}
               alt="crypto"

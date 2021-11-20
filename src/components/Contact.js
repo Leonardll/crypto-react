@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { FaFacebook, FaLinkedin, FaGithub } from 'react-icons/fa';
 import { AiOutlineTwitter } from 'react-icons/ai';
 //import { AiOutlineTwitter } from 'react-icons/ai';
@@ -35,8 +36,7 @@ function Contact  () {
                     <div className="col-lg-4">
                         <h4 className="text-uppercase">About Freelancer</h4>
                         <p className="lead mb-0">
-                            Freelance is a free to use, MIT licensed Bootstrap theme created by
-                            <a href="http://startbootstrap.com">Start Bootstrap</a>                            
+                            "Find a work you love and won't have to work a day in your life"  Confusius         
                         </p>
                     </div>
                 </div>

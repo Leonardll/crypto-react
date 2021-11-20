@@ -2,15 +2,15 @@ const webpack = require('webpack');
 const path = require('path');
 //const withPlugins = require('next-compose-plugins');
 //const optimizedImages = require('next-optimized-images');
-const withImages = require('next-images')
+//const withImages = require('next-images')
 
 
-module.exports = withImages( {
+module.exports =  {
   
   images: {
     domains: ['assets.coingecko.com', 'myreactcryptotracker.web.app'],
-    //  loader: 'imgix',
-    //  path: 'https://assets.coingecko.com/coins/images/',
+      //  loader: 'imgix',
+      //  path: 'https://assets.coingecko.com/',
   },
   reactStrictMode: true,
   entry: './src/index.js',
@@ -36,4 +36,4 @@ module.exports = withImages( {
 
   //...
 }
-)
+
