@@ -85,9 +85,9 @@ function Header({ setSearch, ...rest }) {
       </nav>
       <header className="masthead">
         <div className="container-fluid">
-          <div className="masthead-subheading">Welcome To Our Studio!</div>
+          <div className="masthead-subheading">Welcome To Crypto Tracker!</div>
           <div className="masthead-heading text-uppercase">
-            It's Nice To Meet You
+          Crypto Prices by Market Cap
           </div>
           <a className="btn btn-primary btn-xl text-uppercase" href="#about">
             Tell Me More
