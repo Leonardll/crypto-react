@@ -8,6 +8,7 @@ import Contact from '../components/Contact';
 import About from '../components/About';
 import Layout from '../components/Layout';
 import Link from 'next/link';
+import ScrollToTop from '../components/ScrollToTop';
 
 export default function Home({coins}) {
   
@@ -83,6 +84,7 @@ export default function Home({coins}) {
           
         </a>
       </footer>
+      <ScrollToTop />
     </div>
     </Layout>
   )
