@@ -2,10 +2,10 @@ const webpack = require('webpack');
 const path = require('path');
 //const withPlugins = require('next-compose-plugins');
 //const optimizedImages = require('next-optimized-images');
-//const withImages = require('next-images')
+const withImages = require('next-images')
 
 
-module.exports =  {
+module.exports = withImages(  {
   
   images: {
     domains: ['assets.coingecko.com', 'myreactcryptotracker.web.app'],
@@ -36,4 +36,4 @@ module.exports =  {
 
   //...
 }
-
+)

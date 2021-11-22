@@ -1,6 +1,6 @@
 import Coin from "./Coin";
 
-export default function CoinList({ coins }) {
+export default function CoinList({ filteredCoins }) {
   const {
     name,
     price,
@@ -10,9 +10,9 @@ export default function CoinList({ coins }) {
     current_price,
     total_volume,
     price_change_percentage_24h,
-  } = coins;
+  } = filteredCoins;
   return (
-    console.log(coins[0]),
+    console.log(filteredCoins[0]),
     (
       <>
         <div className="container border-bottom mt-3" id="main">
@@ -29,7 +29,7 @@ export default function CoinList({ coins }) {
                 </tr>
               </thead>
               <tbody>
-                {coins.map((coin) => {
+                {filteredCoins.map((coin) => {
                   return (
                     <Coin
                       key={coin.id}
