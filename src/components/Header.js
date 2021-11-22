@@ -9,7 +9,7 @@ const linkData = [
   { id: "2", title: "About", ref: "#about", to: "about" },
   { id: "3", title: "Contact", ref: "#contact", to: "contact" },
 ];
-function Header({ setSearch, ...rest }) {
+function Header({ theme, setTheme, setSearch, ...rest }) {
   const [clicked, setClicked] = useState(false);
 
   return (
@@ -44,7 +44,7 @@ function Header({ setSearch, ...rest }) {
           <div
             className={
               !clicked
-                ? "navbar-collapse collapse  justify-content-center py-3"
+                ? "navbar-collapse collapse justify-content-center py-3"
                 : "navbar-collapse collapse show justify-content-center py-3"
             }
           >
@@ -60,7 +60,8 @@ function Header({ setSearch, ...rest }) {
                     offset={-70}
                     duration={500}
                     href={items.ref}
-                    className="nav-item">
+                    className="nav-item"
+                  >
                     <a className="nav-link mx-2 active" aria-current="page">
                       {items.title}
                     </a>
@@ -80,6 +81,21 @@ function Header({ setSearch, ...rest }) {
                 aria-label="Search"
               />
             </div>
+            <div className="m-2">
+              <strong className="text-primary">Theme</strong>
+              <label className="dropdown mx-2">
+                <select
+                  className="form-control"
+                  value={theme}
+                  onChange={(event) => {
+                    setTheme(event.target.value);
+                  }}
+                >
+                  <option value="light">Light</option>
+                  <option value="dark">Dark</option>
+                </select>
+              </label>
+            </div>
           </div>
         </div>
       </nav>
@@ -87,7 +103,7 @@ function Header({ setSearch, ...rest }) {
         <div className="container-fluid">
           <div className="masthead-subheading">Welcome To Crypto Tracker!</div>
           <div className="masthead-heading text-uppercase">
-          Crypto Prices by Market Cap
+            Crypto Prices by Market Cap
           </div>
           <a className="btn btn-primary btn-xl text-uppercase" href="#about">
             Tell Me More

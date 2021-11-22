@@ -6,7 +6,7 @@ import { AiOutlineTwitter } from 'react-icons/ai';
 
 function Contact  () {
     return (
-      <section className=" mt-3 contact bg-light footer text-center" id="contact">
+      <section className="contact footer text-center" id="contact">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-4 mb-3 mb-lg-0">

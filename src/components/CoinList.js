@@ -1,21 +1,14 @@
 import Coin from "./Coin";
+import { useEffect, useState } from "react";
 
 export default function CoinList({ filteredCoins }) {
-  const {
-    name,
-    price,
-    symbol,
-    market_cap,
-    image,
-    current_price,
-    total_volume,
-    price_change_percentage_24h,
-  } = filteredCoins;
+  
+
   return (
     console.log(filteredCoins[0]),
     (
       <>
-        <div className="container border-bottom mt-3" id="main">
+        <div className="container mt-3" id="main">
           <div className="table-responsive">
             <table className="table table-striped align-middle table-dark text-white table-hover">
               <thead>

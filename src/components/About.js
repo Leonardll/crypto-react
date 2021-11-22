@@ -22,27 +22,25 @@ const data = [
 const icons = [BiWindowAlt, FaLayerGroup, BiTerminal];
 function About() {
   return (
-    <section className="features-icons bg-light text-center" id="about">
+    <section className="features-icons text-center" id="about">
       <div className="container">
         <div className="row">
           {data.map((item, index) => {
             const Icon = icons[index];
 
             return (
-              <div className="col-lg-4" key={index} >
-                
-                  <div className="features-icons-item mx-auto mb-lg-0 mb-lg-3">
-                    <div
-                      key={item.id}
-                      className="features-icons-icon d-flex text-primary"
-                    >
-                      <Icon key={index} size={70} className="m-auto" />
-                    </div>
-                    <h3>{item.title}</h3>
-                    <p className="lead mb-0">{item.text}</p>
+              <div className="col-lg-4" key={index}>
+                <div className="features-icons-item mx-auto mb-lg-0 mb-lg-3">
+                  <div
+                    key={item.id}
+                    className="features-icons-icon d-flex text-primary"
+                  >
+                    <Icon key={index} size={70} className="m-auto" />
                   </div>
+                  <h3>{item.title}</h3>
+                  <p className="lead mb-0">{item.text}</p>
                 </div>
-              
+              </div>
             );
           })}
         </div>
