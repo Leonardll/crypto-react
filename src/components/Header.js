@@ -5,9 +5,9 @@ import { useState } from "react";
 import { IoLogoBitcoin } from "react-icons/io";
 
 const linkData = [
-  { id: "1", title: "Home", ref: "#main", to: "main" },
-  { id: "2", title: "About", ref: "#about", to: "about" },
-  { id: "3", title: "Contact", ref: "#contact", to: "contact" },
+  { id: "1", title: "Home", ref: "/#main", to: "/main" },
+  { id: "2", title: "About", ref: "/#about", to: "/about" },
+  { id: "3", title: "Contact", ref: "/#contact", to: "/contact" },
 ];
 function Header({ theme, setTheme, setSearch, ...rest }) {
   const [clicked, setClicked] = useState(false);
@@ -19,10 +19,12 @@ function Header({ theme, setTheme, setSearch, ...rest }) {
         id="mainnav"
       >
         <div className="container-fluid">
-          <a className="navbar-brand text-primary" href="#">
+          <Link href="/" passHref>
+          <a className="navbar-brand text-primary" href="#main">
             <IoLogoBitcoin size={30} />
             Crypto Tracker
           </a>
+          </Link>
           {/* <div className=""> */}
           <button
             className="navbar-toggler collapsed"
@@ -61,6 +63,7 @@ function Header({ theme, setTheme, setSearch, ...rest }) {
                     duration={500}
                     href={items.ref}
                     className="nav-item"
+                    passHref
                   >
                     <a className="nav-link mx-2 active" aria-current="page">
                       {items.title}
