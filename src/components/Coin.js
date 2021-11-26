@@ -1,13 +1,18 @@
 import Image from "next/image";
+import Link from 'next/link';
 
 const myLoader = ({ src, width, quality }) => {
   return `${src}?w=${width}&q=${quality || 75}`
 }
-function Coin({ image, name, symbol, price, volume, priceChange, marketcap }) {
+function Coin({ id,image, name, symbol, price, volume, priceChange, marketcap, rank }) {
   console.log(name);
   return (
-    <>
+    <Link href='/coin/[id]' passHref as ={`/coin/${id}`}>
+      
       <tr>
+        <td colSpan="2">
+          {rank}
+        </td>
         <td colSpan="2">
           <div className="d-flex align-items-center">
             <Image
@@ -40,18 +45,10 @@ function Coin({ image, name, symbol, price, volume, priceChange, marketcap }) {
         )}
         <td colSpan="2">MKT cap: ${marketcap.toLocaleString()}</td>
       </tr>
-    </>
+     
+    </Link>
   );
 }
 
 export default Coin;
 
-export async function  getServerSideProps(context) {
-  const {id} = context.query
-  const res = await fetch(`https://api.coingecko.com/api/v3/coins/${id}
-  `)
-  const data = await res.json()
-  return {
-    props:{coin : data }
-  }
-}

@@ -13,7 +13,8 @@ export default function CoinList({ filteredCoins }) {
             <table className="table table-striped align-middle table-dark text-white table-hover">
               <thead>
                 <tr>
-                  <th colSpan="2">Name</th>
+                  <th colSpan="2">#</th>
+                  <th colSpan="2">Coin</th>
                   <th colSpan="2">Symbol</th>
                   <th colSpan="2">Price</th>
                   <th colSpan="2">volume</th>
@@ -26,6 +27,7 @@ export default function CoinList({ filteredCoins }) {
                   return (
                     <Coin
                       key={coin.id}
+                      rank={coin.market_cap_rank}
                       name={coin.name}
                       id={coin.id}
                       price={coin.current_price}
